@@ -1,0 +1,796 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03A9AA7A9D29972B0F41D305 /* Pods_SSKWebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C564E3D5D0068959B80F69EC /* Pods_SSKWebKit.framework */; };
+		041587552330A5DA00F2873E /* SSKWebKitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041587542330A5DA00F2873E /* SSKWebKitTool.swift */; };
+		044474BC23289D9D00C47D47 /* SSKWebViewJSBridgeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044474BB23289D9D00C47D47 /* SSKWebViewJSBridgeHandler.swift */; };
+		0448BDD2232780EC001041A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0448BDD1232780EC001041A7 /* Assets.xcassets */; };
+		0448BDD5232780EC001041A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0448BDD3232780EC001041A7 /* LaunchScreen.storyboard */; };
+		0448BDE0232780EC001041A7 /* SSKWebKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BDDF232780EC001041A7 /* SSKWebKitTests.swift */; };
+		0448BDEB232780EC001041A7 /* SSKWebKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BDEA232780EC001041A7 /* SSKWebKitUITests.swift */; };
+		0448BDFA232793B5001041A7 /* SSKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BDF9232793B5001041A7 /* SSKWebViewController.swift */; };
+		0448BDFD23279459001041A7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BDFC23279459001041A7 /* UIColor.swift */; };
+		0448BDFF232795AD001041A7 /* SSKWebViewAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BDFE232795AD001041A7 /* SSKWebViewAlertController.swift */; };
+		0448BE01232795F9001041A7 /* SSKWebRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE00232795F9001041A7 /* SSKWebRouter.swift */; };
+		0448BE0F2327A5E9001041A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE0D2327A5E9001041A7 /* AppDelegate.swift */; };
+		0448BE102327A5E9001041A7 /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE0E2327A5E9001041A7 /* AppDelegate+Extension.swift */; };
+		0448BE122327A5FC001041A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE112327A5FC001041A7 /* HomeViewController.swift */; };
+		0448BE142327A618001041A7 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE132327A618001041A7 /* DiscoverViewController.swift */; };
+		0448BE162327A62A001041A7 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE152327A62A001041A7 /* MineViewController.swift */; };
+		0448BE182327A634001041A7 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE172327A634001041A7 /* NewsViewController.swift */; };
+		0448BE1A2327AAFF001041A7 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0448BE192327AAFF001041A7 /* Mine.storyboard */; };
+		0448BE1C2327AEE4001041A7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE1B2327AEE4001041A7 /* SettingsViewController.swift */; };
+		0448BE1F2327B2D3001041A7 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE1E2327B2D3001041A7 /* BaseNavigationController.swift */; };
+		04DB437F2329E8260010E034 /* SSKWebLifeCycleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB437E2329E8260010E034 /* SSKWebLifeCycleDelegate.swift */; };
+		04DB4381232A2B980010E034 /* SSKWebCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB4380232A2B980010E034 /* SSKWebCacheManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0448BDDC232780EC001041A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0448BDBF232780E9001041A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0448BDC6232780E9001041A7;
+			remoteInfo = SSKWebKit;
+		};
+		0448BDE7232780EC001041A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0448BDBF232780E9001041A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0448BDC6232780E9001041A7;
+			remoteInfo = SSKWebKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		041587542330A5DA00F2873E /* SSKWebKitTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebKitTool.swift; sourceTree = "<group>"; };
+		044474BB23289D9D00C47D47 /* SSKWebViewJSBridgeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebViewJSBridgeHandler.swift; sourceTree = "<group>"; };
+		0448BDC7232780E9001041A7 /* SSKWebKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSKWebKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0448BDD1232780EC001041A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0448BDD4232780EC001041A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0448BDD6232780EC001041A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0448BDDB232780EC001041A7 /* SSKWebKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSKWebKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0448BDDF232780EC001041A7 /* SSKWebKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebKitTests.swift; sourceTree = "<group>"; };
+		0448BDE1232780EC001041A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0448BDE6232780EC001041A7 /* SSKWebKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSKWebKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0448BDEA232780EC001041A7 /* SSKWebKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebKitUITests.swift; sourceTree = "<group>"; };
+		0448BDEC232780EC001041A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0448BDF9232793B5001041A7 /* SSKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSKWebViewController.swift; sourceTree = "<group>"; };
+		0448BDFC23279459001041A7 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		0448BDFE232795AD001041A7 /* SSKWebViewAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSKWebViewAlertController.swift; sourceTree = "<group>"; };
+		0448BE00232795F9001041A7 /* SSKWebRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebRouter.swift; sourceTree = "<group>"; };
+		0448BE0D2327A5E9001041A7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0448BE0E2327A5E9001041A7 /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
+		0448BE112327A5FC001041A7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0448BE132327A618001041A7 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		0448BE152327A62A001041A7 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		0448BE172327A634001041A7 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		0448BE192327AAFF001041A7 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		0448BE1B2327AEE4001041A7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0448BE1E2327B2D3001041A7 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		04DB437E2329E8260010E034 /* SSKWebLifeCycleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebLifeCycleDelegate.swift; sourceTree = "<group>"; };
+		04DB4380232A2B980010E034 /* SSKWebCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebCacheManager.swift; sourceTree = "<group>"; };
+		4032AEB5627D38A275EE0945 /* Pods-SSKWebKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSKWebKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SSKWebKit/Pods-SSKWebKit.debug.xcconfig"; sourceTree = "<group>"; };
+		BE3C189A89860F83BF945F9C /* Pods-SSKWebKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSKWebKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SSKWebKit/Pods-SSKWebKit.release.xcconfig"; sourceTree = "<group>"; };
+		C564E3D5D0068959B80F69EC /* Pods_SSKWebKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSKWebKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0448BDC4232780E9001041A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03A9AA7A9D29972B0F41D305 /* Pods_SSKWebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0448BDD8232780EC001041A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0448BDE3232780EC001041A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0448BDBE232780E9001041A7 = {
+			isa = PBXGroup;
+			children = (
+				0448BDC9232780E9001041A7 /* SSKWebKit */,
+				0448BDDE232780EC001041A7 /* SSKWebKitTests */,
+				0448BDE9232780EC001041A7 /* SSKWebKitUITests */,
+				0448BDC8232780E9001041A7 /* Products */,
+				57F21274DFD1BE313CA6BF6E /* Pods */,
+				96CAA56D133B18ED8CE5F50A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0448BDC8232780E9001041A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0448BDC7232780E9001041A7 /* SSKWebKit.app */,
+				0448BDDB232780EC001041A7 /* SSKWebKitTests.xctest */,
+				0448BDE6232780EC001041A7 /* SSKWebKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0448BDC9232780E9001041A7 /* SSKWebKit */ = {
+			isa = PBXGroup;
+			children = (
+				0448BE0223279CD0001041A7 /* Example */,
+				0448BDFB23279459001041A7 /* Common */,
+				0448BDF8232793B5001041A7 /* Sources */,
+				0448BDD1232780EC001041A7 /* Assets.xcassets */,
+				0448BDD3232780EC001041A7 /* LaunchScreen.storyboard */,
+				0448BDD6232780EC001041A7 /* Info.plist */,
+			);
+			path = SSKWebKit;
+			sourceTree = "<group>";
+		};
+		0448BDDE232780EC001041A7 /* SSKWebKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				0448BDDF232780EC001041A7 /* SSKWebKitTests.swift */,
+				0448BDE1232780EC001041A7 /* Info.plist */,
+			);
+			path = SSKWebKitTests;
+			sourceTree = "<group>";
+		};
+		0448BDE9232780EC001041A7 /* SSKWebKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0448BDEA232780EC001041A7 /* SSKWebKitUITests.swift */,
+				0448BDEC232780EC001041A7 /* Info.plist */,
+			);
+			path = SSKWebKitUITests;
+			sourceTree = "<group>";
+		};
+		0448BDF8232793B5001041A7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				041587542330A5DA00F2873E /* SSKWebKitTool.swift */,
+				0448BDFE232795AD001041A7 /* SSKWebViewAlertController.swift */,
+				0448BDF9232793B5001041A7 /* SSKWebViewController.swift */,
+				0448BE00232795F9001041A7 /* SSKWebRouter.swift */,
+				04DB4380232A2B980010E034 /* SSKWebCacheManager.swift */,
+				04DB437E2329E8260010E034 /* SSKWebLifeCycleDelegate.swift */,
+				044474BB23289D9D00C47D47 /* SSKWebViewJSBridgeHandler.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0448BDFB23279459001041A7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0448BDFC23279459001041A7 /* UIColor.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0448BE0223279CD0001041A7 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				0448BE1D2327B2BD001041A7 /* Base */,
+				0448BE0C2327A5E9001041A7 /* App */,
+				0448BE072327A434001041A7 /* Section */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		0448BE072327A434001041A7 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				0448BE092327A5CC001041A7 /* Discover */,
+				0448BE0A2327A5CC001041A7 /* Home */,
+				0448BE0B2327A5CC001041A7 /* Mine */,
+				0448BE082327A5CC001041A7 /* News */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		0448BE082327A5CC001041A7 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				0448BE172327A634001041A7 /* NewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		0448BE092327A5CC001041A7 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				0448BE132327A618001041A7 /* DiscoverViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		0448BE0A2327A5CC001041A7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0448BE112327A5FC001041A7 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0448BE0B2327A5CC001041A7 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				0448BE152327A62A001041A7 /* MineViewController.swift */,
+				0448BE1B2327AEE4001041A7 /* SettingsViewController.swift */,
+				0448BE192327AAFF001041A7 /* Mine.storyboard */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		0448BE0C2327A5E9001041A7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0448BE0D2327A5E9001041A7 /* AppDelegate.swift */,
+				0448BE0E2327A5E9001041A7 /* AppDelegate+Extension.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0448BE1D2327B2BD001041A7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0448BE1E2327B2D3001041A7 /* BaseNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		57F21274DFD1BE313CA6BF6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4032AEB5627D38A275EE0945 /* Pods-SSKWebKit.debug.xcconfig */,
+				BE3C189A89860F83BF945F9C /* Pods-SSKWebKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		96CAA56D133B18ED8CE5F50A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C564E3D5D0068959B80F69EC /* Pods_SSKWebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0448BDC6232780E9001041A7 /* SSKWebKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0448BDEF232780EC001041A7 /* Build configuration list for PBXNativeTarget "SSKWebKit" */;
+			buildPhases = (
+				EFB0F98088CD50D4400A5FD4 /* [CP] Check Pods Manifest.lock */,
+				0448BDC3232780E9001041A7 /* Sources */,
+				0448BDC4232780E9001041A7 /* Frameworks */,
+				0448BDC5232780E9001041A7 /* Resources */,
+				13C05C66A70B74AEFC28D3BC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSKWebKit;
+			productName = SSKWebKit;
+			productReference = 0448BDC7232780E9001041A7 /* SSKWebKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0448BDDA232780EC001041A7 /* SSKWebKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0448BDF2232780EC001041A7 /* Build configuration list for PBXNativeTarget "SSKWebKitTests" */;
+			buildPhases = (
+				0448BDD7232780EC001041A7 /* Sources */,
+				0448BDD8232780EC001041A7 /* Frameworks */,
+				0448BDD9232780EC001041A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0448BDDD232780EC001041A7 /* PBXTargetDependency */,
+			);
+			name = SSKWebKitTests;
+			productName = SSKWebKitTests;
+			productReference = 0448BDDB232780EC001041A7 /* SSKWebKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0448BDE5232780EC001041A7 /* SSKWebKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0448BDF5232780EC001041A7 /* Build configuration list for PBXNativeTarget "SSKWebKitUITests" */;
+			buildPhases = (
+				0448BDE2232780EC001041A7 /* Sources */,
+				0448BDE3232780EC001041A7 /* Frameworks */,
+				0448BDE4232780EC001041A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0448BDE8232780EC001041A7 /* PBXTargetDependency */,
+			);
+			name = SSKWebKitUITests;
+			productName = SSKWebKitUITests;
+			productReference = 0448BDE6232780EC001041A7 /* SSKWebKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0448BDBF232780E9001041A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = SSK;
+				TargetAttributes = {
+					0448BDC6232780E9001041A7 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					0448BDDA232780EC001041A7 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 0448BDC6232780E9001041A7;
+					};
+					0448BDE5232780EC001041A7 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 0448BDC6232780E9001041A7;
+					};
+				};
+			};
+			buildConfigurationList = 0448BDC2232780E9001041A7 /* Build configuration list for PBXProject "SSKWebKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0448BDBE232780E9001041A7;
+			productRefGroup = 0448BDC8232780E9001041A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0448BDC6232780E9001041A7 /* SSKWebKit */,
+				0448BDDA232780EC001041A7 /* SSKWebKitTests */,
+				0448BDE5232780EC001041A7 /* SSKWebKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0448BDC5232780E9001041A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0448BE1A2327AAFF001041A7 /* Mine.storyboard in Resources */,
+				0448BDD5232780EC001041A7 /* LaunchScreen.storyboard in Resources */,
+				0448BDD2232780EC001041A7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0448BDD9232780EC001041A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0448BDE4232780EC001041A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13C05C66A70B74AEFC28D3BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SSKWebKit/Pods-SSKWebKit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SSKWebKit/Pods-SSKWebKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFB0F98088CD50D4400A5FD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SSKWebKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0448BDC3232780E9001041A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0448BDFD23279459001041A7 /* UIColor.swift in Sources */,
+				0448BDFA232793B5001041A7 /* SSKWebViewController.swift in Sources */,
+				0448BE1C2327AEE4001041A7 /* SettingsViewController.swift in Sources */,
+				041587552330A5DA00F2873E /* SSKWebKitTool.swift in Sources */,
+				0448BE162327A62A001041A7 /* MineViewController.swift in Sources */,
+				044474BC23289D9D00C47D47 /* SSKWebViewJSBridgeHandler.swift in Sources */,
+				04DB4381232A2B980010E034 /* SSKWebCacheManager.swift in Sources */,
+				0448BE182327A634001041A7 /* NewsViewController.swift in Sources */,
+				04DB437F2329E8260010E034 /* SSKWebLifeCycleDelegate.swift in Sources */,
+				0448BE01232795F9001041A7 /* SSKWebRouter.swift in Sources */,
+				0448BE0F2327A5E9001041A7 /* AppDelegate.swift in Sources */,
+				0448BE102327A5E9001041A7 /* AppDelegate+Extension.swift in Sources */,
+				0448BE1F2327B2D3001041A7 /* BaseNavigationController.swift in Sources */,
+				0448BE142327A618001041A7 /* DiscoverViewController.swift in Sources */,
+				0448BE122327A5FC001041A7 /* HomeViewController.swift in Sources */,
+				0448BDFF232795AD001041A7 /* SSKWebViewAlertController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0448BDD7232780EC001041A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0448BDE0232780EC001041A7 /* SSKWebKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0448BDE2232780EC001041A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0448BDEB232780EC001041A7 /* SSKWebKitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0448BDDD232780EC001041A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0448BDC6232780E9001041A7 /* SSKWebKit */;
+			targetProxy = 0448BDDC232780EC001041A7 /* PBXContainerItemProxy */;
+		};
+		0448BDE8232780EC001041A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0448BDC6232780E9001041A7 /* SSKWebKit */;
+			targetProxy = 0448BDE7232780EC001041A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0448BDD3232780EC001041A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0448BDD4232780EC001041A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0448BDED232780EC001041A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0448BDEE232780EC001041A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0448BDF0232780EC001041A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4032AEB5627D38A275EE0945 /* Pods-SSKWebKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VF785H8H7F;
+				INFOPLIST_FILE = SSKWebKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SSK.SSKWebKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0448BDF1232780EC001041A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE3C189A89860F83BF945F9C /* Pods-SSKWebKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VF785H8H7F;
+				INFOPLIST_FILE = SSKWebKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SSK.SSKWebKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0448BDF3232780EC001041A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VF785H8H7F;
+				INFOPLIST_FILE = SSKWebKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SSK.SSKWebKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SSKWebKit.app/SSKWebKit";
+			};
+			name = Debug;
+		};
+		0448BDF4232780EC001041A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VF785H8H7F;
+				INFOPLIST_FILE = SSKWebKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SSK.SSKWebKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SSKWebKit.app/SSKWebKit";
+			};
+			name = Release;
+		};
+		0448BDF6232780EC001041A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VF785H8H7F;
+				INFOPLIST_FILE = SSKWebKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SSK.SSKWebKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SSKWebKit;
+			};
+			name = Debug;
+		};
+		0448BDF7232780EC001041A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VF785H8H7F;
+				INFOPLIST_FILE = SSKWebKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SSK.SSKWebKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SSKWebKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0448BDC2232780E9001041A7 /* Build configuration list for PBXProject "SSKWebKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0448BDED232780EC001041A7 /* Debug */,
+				0448BDEE232780EC001041A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0448BDEF232780EC001041A7 /* Build configuration list for PBXNativeTarget "SSKWebKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0448BDF0232780EC001041A7 /* Debug */,
+				0448BDF1232780EC001041A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0448BDF2232780EC001041A7 /* Build configuration list for PBXNativeTarget "SSKWebKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0448BDF3232780EC001041A7 /* Debug */,
+				0448BDF4232780EC001041A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0448BDF5232780EC001041A7 /* Build configuration list for PBXNativeTarget "SSKWebKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0448BDF6232780EC001041A7 /* Debug */,
+				0448BDF7232780EC001041A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0448BDBF232780E9001041A7 /* Project object */;
+}

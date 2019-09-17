@@ -1,0 +1,6 @@
+framework module Pods_SSKWebKit {
+  umbrella header "Pods-SSKWebKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
