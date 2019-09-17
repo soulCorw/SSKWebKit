@@ -126,21 +126,21 @@ class SSKWebNavigationToolBar: UIToolbar {
     }
 }
 
-class SSKWebViewController: UIViewController {
+open class SSKWebViewController: UIViewController {
     
     var navBarOriginBarTintColor: UIColor?
     var navBarOriginTintColor: UIColor?
     var navBarOriginTitleTextAttributes: [NSAttributedString.Key : Any]?
     
     
-    var statusBarStyle: UIStatusBarStyle = .default
+    open var statusBarStyle: UIStatusBarStyle = .default
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+    override open var preferredStatusBarStyle: UIStatusBarStyle {
         return statusBarStyle
     }
     
     
-    var urlString: String = ""
+    open var urlString: String = ""
     var customTitle: String = "" {
         didSet {
             self.navigationItem.title = customTitle
@@ -183,7 +183,7 @@ class SSKWebViewController: UIViewController {
         return bridge
     }()
     
-    override func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         
@@ -198,7 +198,7 @@ class SSKWebViewController: UIViewController {
         navConfigViewWillAppear()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         //initURLDidFinish: 如果html还没有加载完，不会有任何响应
@@ -213,19 +213,19 @@ class SSKWebViewController: UIViewController {
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         navConfigViewWillDisappear()
         
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override open func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.jsBridgeHandler.lcDelegate?.onHide()
     }
     
-    override func viewWillLayoutSubviews() {
+    override open func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         var topMargin: CGFloat = 0
         if #available(iOS 11.0, *) {
@@ -252,7 +252,7 @@ class SSKWebViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
@@ -349,7 +349,7 @@ class SSKWebViewController: UIViewController {
     }
     
     // 监控进度
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
         print(#function)
         
@@ -398,7 +398,7 @@ class SSKWebViewController: UIViewController {
 extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
     
     // 发起页内跳转Action
-    func webView(_ webView: WKWebView,
+    public func webView(_ webView: WKWebView,
                  decidePolicyFor navigationAction: WKNavigationAction,
                  decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         print(#function)
@@ -406,7 +406,7 @@ extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
     }
     
     // 单页内跳转时收到服务器响应
-    func webView(_ webView: WKWebView,
+    public func webView(_ webView: WKWebView,
                  decidePolicyFor navigationResponse: WKNavigationResponse,
                  decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         print(#function)
@@ -416,14 +416,14 @@ extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
     
     
     // 页面开始加载
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         progressView.alpha = 1.0
         
         debugPrint(#function)
     }
     
     // 加载完成
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         debugPrint(#function)
         if self.customTitle == "" {
             self.navigationItem.title = webView.title
@@ -446,7 +446,7 @@ extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
     }
     
     // 服务器重定向
-    func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
         debugPrint(#function)
     }
     
@@ -454,23 +454,23 @@ extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
 
     
     // 内容加载失败
-    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         debugPrint(#function)
     }
     
     // 跳转失败
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         debugPrint(#function)
     }
     
     // 进度
-    func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+    public func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
         debugPrint(#function)
         webView.reload()
     }
     
     // Alert
-    func webView(_ webView: WKWebView,
+    public func webView(_ webView: WKWebView,
                  runJavaScriptAlertPanelWithMessage message: String,
                  initiatedByFrame frame: WKFrameInfo,
                  completionHandler: @escaping () -> Void) {
@@ -505,7 +505,7 @@ extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
     }
     
     // Prompt
-    func webView(_ webView: WKWebView,
+    public func webView(_ webView: WKWebView,
                  runJavaScriptTextInputPanelWithPrompt prompt: String,
                  defaultText: String?,
                  initiatedByFrame frame: WKFrameInfo,
@@ -514,7 +514,7 @@ extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
     }
     
     // Confirm
-    func webView(_ webView: WKWebView,
+    public func webView(_ webView: WKWebView,
                  runJavaScriptConfirmPanelWithMessage message: String,
                  initiatedByFrame frame: WKFrameInfo,
                  completionHandler: @escaping (Bool) -> Void) {
