@@ -237,7 +237,13 @@ class SSKWebViewController: UIViewController {
         webView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(topMargin)
             $0.left.right.equalToSuperview()
-            $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+            
+            if #available(iOS 11.0, *) {
+                $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+            } else {
+                $0.bottom.equalTo(bottomLayoutGuide.snp.bottom)
+               
+            }
         }
         progressView.snp.makeConstraints {
             $0.top.equalTo(webView)
@@ -272,7 +278,12 @@ class SSKWebViewController: UIViewController {
             toolBar.snp.makeConstraints { (make) in
                 make.left.right.equalToSuperview()
                 make.height.equalTo(44)
-                make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+            
+                if #available(iOS 11.0, *) {
+                    make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+                } else {
+                    make.bottom.equalTo(bottomLayoutGuide.snp.bottom)
+                }
             }
         }
         
