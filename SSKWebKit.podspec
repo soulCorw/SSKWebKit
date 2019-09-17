@@ -1,12 +1,12 @@
 
 Pod::Spec.new do |s|
-    s.name         = 'HBQRCode'
+    s.name         = 'SSKWebKit'
     s.version      = '1.0.0'
-    s.summary      = 'iOS native two-dimensional code scanning'
+    s.summary      = 'SSKWebkit'
     s.homepage     = 'https://gitee.com/LYSoulCorw/HBQRCode'
     s.license      = 'Apache-2.0'
     s.authors      = {'HBToken iOS Team' => 'soulcrow@gitee.com'}
-    s.platform     = :ios, '8.0'
+    s.platform     = :ios, '10.0'
     s.source       = {:git => 'git@gitee.com:LYSoulCorw/HBQRCode.git', :tag => s.version}
 
     s.public_header_files = "Sources/*.h","Sources/Public/*.h"
@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
     s.requires_arc = true
 
 
-    s.dependency 'SGQRCode', '~> 2.2.0'
+    s.dependency 'SnapKit', '~> 5.0.0'
 end
