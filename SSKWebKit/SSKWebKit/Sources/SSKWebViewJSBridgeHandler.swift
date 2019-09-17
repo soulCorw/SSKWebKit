@@ -255,18 +255,35 @@ class SSKWebViewJSBridgeHandler {
             }
         })
         
-        jsBridge?.registerHandler("removeAllCache", handler: { (data, responseCallback) in
+        jsBridge?.registerHandler("removeAllCache", handler: { [unowned self] (data, responseCallback) in
             SSKWebCache.shared.removeAllCache {
                 if let callback = responseCallback {
                     callback(true)
                 }
+                
+                self.cacheDidRemove()
                
             }
         })
         
         
-       
+        jsBridge?.registerHandler("setObserverKey", handler: { [unowned self] (data, responseCallback) in
+            if let json = self.json(for: data) {
+                json.arrayValue.forEach({ (key) in
+                    SSKWebCache.shared.addObserver(self, forKey: key.stringValue)
+                })
+              
+            }
+        })
         
+        jsBridge?.registerHandler("removeObserverKey", handler: { [unowned self] (data, responseCallback) in
+            if let json = self.json(for: data) {
+                json.arrayValue.forEach({ (key) in
+                     SSKWebCache.shared.removeObserver(self, forKey: key.stringValue)
+                })
+               
+            }
+        })
         
         
     }

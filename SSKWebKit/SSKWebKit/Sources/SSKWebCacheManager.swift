@@ -47,7 +47,8 @@ class SSKWebCacheObserver {
     var id: String = ""
     
     // 需要监听的keys， 如果为空，则默认监听所有
-    var keys: [String] = []
+    // 需要支持Hashable才能放入Set
+    var keys: Set<String> = []
     
     // 回调
     var handler: SSKWebCachePostHandler!
@@ -71,20 +72,13 @@ class SSKWebCache {
 
     private var cacheMap: Dictionary<String, Any> = [:]
     
-
-    
-    // 需要支持Hashable才能放入Set
-//    private var observers: Set<SSKWebCacheObserver> = []
     private var observers: [String: SSKWebCacheObserver] = [:]
 
-    
 
-
-    
     
     // 监听所有值
     func addObserver(_ observer: SSKWebViewJSBridgeHandler,
-                     keys: [String] = [],
+                     keys: Set<String> = [],
                      handler: @escaping SSKWebCachePostHandler) {
         
         
@@ -100,14 +94,15 @@ class SSKWebCache {
         observers[key] = obs
         
         
-        
-        
     }
     
     // 监听具体的key
-//    func addObserver(_ observer: SSKWebViewJSBridgeHandler, forKey: String) {
-//        keyObservers[forKey] = observer
-//    }
+    func addObserver(_ observer: SSKWebViewJSBridgeHandler, forKey: String) {
+        
+        let key = SSKWebKitTool.address(o: observer)
+        let obs = observers[key]
+        obs?.keys.insert(forKey)
+    }
     
     
     
@@ -117,13 +112,15 @@ class SSKWebCache {
         observers.removeValue(forKey: key)
         
         
-//       let index = observer.index(observer)
-//        observers.remove(at: index)
     }
     
-//    func removeObserver(_ observer: SSKWebCachePostHandler, forKey: String) {
-//        keyObservers.removeValue(forKey: forKey)
-//    }
+    // 删除具体的key
+    func removeObserver(_ observer: SSKWebViewJSBridgeHandler, forKey: String) {
+        
+        let key = SSKWebKitTool.address(o: observer)
+        let obs = observers[key]
+        obs?.keys.remove(forKey)
+    }
     
     func removeAllObserver() {
         
@@ -164,15 +161,23 @@ class SSKWebCache {
     
     
     func didUpdate(key: String, value: Any) {
-        print(#function)
  
         observers.forEach { (arg) in
       
             let (_, observer) = arg
             let json = [key: value]
-            print(json)
-             print(key)
-            observer.handler(json)
+            
+            if observer.keys.count > 0 {
+                
+                if observer.keys.contains(key) {
+                    observer.handler(json)
+                }
+            } else {
+                // 如果keys为空则默认监听所有key
+                observer.handler(json)
+            }
+           
+            
         }
        
     }

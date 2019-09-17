@@ -20,6 +20,7 @@ class SettingsViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.tableView.tableFooterView = UIView()
+
     }
 
     // MARK: - Table view data source
