@@ -9,11 +9,17 @@ Pod::Spec.new do |s|
     s.platform     = :ios, '10.0'
     s.source       = {:git => 'git@github.com:soulCorw/SSKWebKit.git', :tag => s.version}
 
-    s.public_header_files = "Sources/*.h","Sources/Public/*.h"
-    s.source_files = 'Sources/**/*.{h,m}'
-    s.resource     = 'Sources/HBQRCode.bundle'
-    s.requires_arc = true
+
+    s.source_files = 'SSKWebKit/Sources/*.swift'
+    #s.resource     = 'Sources/HBQRCode.bundle'
+    
 
 
     s.dependency 'SnapKit', '~> 5.0.0'
+    s.dependency 'WebViewJavascriptBridge', '~> 6.0'
+    s.dependency 'SwiftyJSON'
+    
+    
+    
+    s.swift_version = '5.0'
 end
