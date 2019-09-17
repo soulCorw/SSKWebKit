@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
     s.source       = {:git => 'git@github.com:soulCorw/SSKWebKit.git', :tag => s.version}
 
 
-    s.source_files = 'SSKWebKit/Sources/*.swift'
+
+    s.source_files = 'SSKWebKit/SSKWebKit/Sources/*.swift'
     #s.resource     = 'Sources/HBQRCode.bundle'
     
 
