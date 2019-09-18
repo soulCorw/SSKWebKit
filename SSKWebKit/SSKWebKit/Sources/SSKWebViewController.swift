@@ -262,7 +262,7 @@ open class SSKWebViewController: UIViewController {
         loadWebUrlRequest()
         
         // 本控制器不再是webView的代理
-       // jsBridgeHandler.config(webView, form: self)
+        jsBridgeHandler.config(webView, form: self)
         
         
         
@@ -434,19 +434,19 @@ extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
             self.navigationItem.title = webView.title
         }
         
-        if !initURLDidFinish {
-            // 加载完成
-            jsBridgeHandler.lcDelegate?.onLoad()
-           // jsBridgeHandler.lcDelegate?.onShow()
-            debugPrint("didFinish------>")
-            initURLDidFinish = true
-        }
+//        if !initURLDidFinish {
+//            // 加载完成
+//            jsBridgeHandler.lcDelegate?.onLoad()
+//           // jsBridgeHandler.lcDelegate?.onShow()
+//            debugPrint("didFinish------>")
+//            initURLDidFinish = true
+//        }
         
         
-        //
-        if webView.canGoBack || webView.canGoForward {
-            showToolBar()
-        }
+//        //
+//        if webView.canGoBack || webView.canGoForward {
+//            showToolBar()
+//        }
         
     }
     
