@@ -178,10 +178,10 @@ open class SSKWebViewController: UIViewController {
     
     var jsAlertHandler: ((String, WKFrameInfo) ->Void)?
     
-    lazy var jsBridgeHandler: SSKWebViewJSBridgeHandler = {
-        let bridge = SSKWebViewJSBridgeHandler()
-        return bridge
-    }()
+//    lazy var jsBridgeHandler: SSKWebViewJSBridgeHandler = {
+//        let bridge = SSKWebViewJSBridgeHandler()
+//        return bridge
+//    }()
     
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -389,7 +389,7 @@ open class SSKWebViewController: UIViewController {
         
         print(#function)
         
-        jsBridgeHandler.lcDelegate?.onUnload()
+        //jsBridgeHandler.lcDelegate?.onUnload()
         
         webView.removeObserver(self, forKeyPath: "URL")
         webView.removeObserver(self, forKeyPath: "estimatedProgress")
