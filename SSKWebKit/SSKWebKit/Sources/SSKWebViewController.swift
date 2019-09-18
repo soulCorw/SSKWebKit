@@ -170,7 +170,7 @@ open class SSKWebViewController: UIViewController {
     private lazy var toolBar: SSKWebNavigationToolBar = {
      
         let bar = SSKWebNavigationToolBar()
-        bar.backgroundColor = .red
+
         bar.itemHandler = { [unowned self] in
             self.toolBarAction($0)
         }
