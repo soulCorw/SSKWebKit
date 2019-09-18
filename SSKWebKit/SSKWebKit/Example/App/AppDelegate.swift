@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // js:
         //
         
+        // 访问控制
+        // https://www.jianshu.com/p/8ba6d1513141
         return true
     }
 

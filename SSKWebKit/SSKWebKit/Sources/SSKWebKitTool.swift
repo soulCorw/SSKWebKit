@@ -59,3 +59,32 @@ internal extension UIColor {
     
     
 }
+
+extension Bundle {
+    
+    static func sskWebkitBundle() -> Bundle? {
+        if let path = Bundle(for: SSKWebNavigationToolBar.self).path(forResource: "SSKWebKit", ofType: "bundle") {
+            return Bundle(path: path)
+        }
+        return  nil
+    }
+    
+    static func backIcon() -> UIImage? {
+        return UIImage(named: "toolbar_back_available", in: Bundle.sskWebkitBundle(), compatibleWith: nil)
+       
+    }
+    
+    static func nextIcon()-> UIImage? {
+        return UIImage(named: "toolbar_next_unavailable", in: Bundle.sskWebkitBundle(), compatibleWith: nil)
+    }
+    
+    static func makeToolBarNextImage() -> (UIImage, UIImage) {
+        return (nextIcon()!,
+                SSKWebKitTool.transform(for: backIcon()!, orientation: .down).1)
+    }
+    
+    static func makeToolBarBackImage() -> (UIImage, UIImage) {
+        return (backIcon()!,
+                SSKWebKitTool.transform(for: nextIcon()!, orientation: .down).1)
+    }
+}

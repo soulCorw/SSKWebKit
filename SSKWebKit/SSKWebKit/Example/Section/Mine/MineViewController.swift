@@ -28,9 +28,6 @@ class MineViewController: UIViewController {
     @objc func itemAction(_ sender: UIButton) {
         
         
-
- 
-        
         let storyboard = UIStoryboard.init(name: "Mine", bundle: nil)
     
         let setringsVC = storyboard.instantiateViewController(withIdentifier: "SettingsViewController")

@@ -27,6 +27,7 @@
 		0448BE1A2327AAFF001041A7 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0448BE192327AAFF001041A7 /* Mine.storyboard */; };
 		0448BE1C2327AEE4001041A7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE1B2327AEE4001041A7 /* SettingsViewController.swift */; };
 		0448BE1F2327B2D3001041A7 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE1E2327B2D3001041A7 /* BaseNavigationController.swift */; };
+		04AD76272331967B00FE6FEF /* SSKWebKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04AD76262331967B00FE6FEF /* SSKWebKit.bundle */; };
 		04DB437F2329E8260010E034 /* SSKWebLifeCycleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB437E2329E8260010E034 /* SSKWebLifeCycleDelegate.swift */; };
 		04DB4381232A2B980010E034 /* SSKWebCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB4380232A2B980010E034 /* SSKWebCacheManager.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		0448BE192327AAFF001041A7 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		0448BE1B2327AEE4001041A7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0448BE1E2327B2D3001041A7 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		04AD76262331967B00FE6FEF /* SSKWebKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSKWebKit.bundle; sourceTree = "<group>"; };
 		04DB437E2329E8260010E034 /* SSKWebLifeCycleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebLifeCycleDelegate.swift; sourceTree = "<group>"; };
 		04DB4380232A2B980010E034 /* SSKWebCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebCacheManager.swift; sourceTree = "<group>"; };
 		4032AEB5627D38A275EE0945 /* Pods-SSKWebKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSKWebKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SSKWebKit/Pods-SSKWebKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		0448BDF8232793B5001041A7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				04AD76262331967B00FE6FEF /* SSKWebKit.bundle */,
 				041587542330A5DA00F2873E /* SSKWebKitTool.swift */,
 				0448BDFE232795AD001041A7 /* SSKWebViewAlertController.swift */,
 				0448BDF9232793B5001041A7 /* SSKWebViewController.swift */,
@@ -380,6 +383,7 @@
 				0448BE1A2327AAFF001041A7 /* Mine.storyboard in Resources */,
 				0448BDD5232780EC001041A7 /* LaunchScreen.storyboard in Resources */,
 				0448BDD2232780EC001041A7 /* Assets.xcassets in Resources */,
+				04AD76272331967B00FE6FEF /* SSKWebKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
