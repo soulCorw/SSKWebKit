@@ -208,7 +208,7 @@ open class SSKWebViewController: UIViewController {
         debugPrint("viewDidAppear")
         
         //if initURLDidFinish {
-            self.jsBridgeHandler.lcDelegate?.onShow()
+            //self.jsBridgeHandler.lcDelegate?.onShow()
         //}
         
     }
@@ -222,7 +222,7 @@ open class SSKWebViewController: UIViewController {
     
     override open func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.jsBridgeHandler.lcDelegate?.onHide()
+       // self.jsBridgeHandler.lcDelegate?.onHide()
     }
     
     override open func viewWillLayoutSubviews() {
@@ -262,7 +262,7 @@ open class SSKWebViewController: UIViewController {
         loadWebUrlRequest()
         
         // 本控制器不再是webView的代理
-        jsBridgeHandler.config(webView, form: self)
+       // jsBridgeHandler.config(webView, form: self)
         
         
         
@@ -444,9 +444,9 @@ extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
         
         
 //        //
-//        if webView.canGoBack || webView.canGoForward {
-//            showToolBar()
-//        }
+        if webView.canGoBack || webView.canGoForward {
+            showToolBar()
+        }
         
     }
     
