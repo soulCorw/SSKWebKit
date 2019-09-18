@@ -170,6 +170,7 @@ open class SSKWebViewController: UIViewController {
     private lazy var toolBar: SSKWebNavigationToolBar = {
      
         let bar = SSKWebNavigationToolBar()
+        bar.backgroundColor = .red
         bar.itemHandler = { [unowned self] in
             self.toolBarAction($0)
         }
@@ -238,12 +239,15 @@ open class SSKWebViewController: UIViewController {
             $0.top.equalToSuperview().offset(topMargin)
             $0.left.right.equalToSuperview()
             
+
             if #available(iOS 11.0, *) {
                 $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
             } else {
                 $0.bottom.equalTo(bottomLayoutGuide.snp.bottom)
-               
+                
             }
+
+            
         }
         progressView.snp.makeConstraints {
             $0.top.equalTo(webView)
@@ -264,10 +268,7 @@ open class SSKWebViewController: UIViewController {
         // 本控制器不再是webView的代理
         jsBridgeHandler.config(webView, form: self)
         
-        
-        
-        
-        
+
     }
     
 
@@ -295,11 +296,8 @@ open class SSKWebViewController: UIViewController {
                 }
             }
             
-            
-//            webView.snp.updateConstraints { (make) in
-//                make.bottom.equalTo(toolBar.snp.top)
-//            }
-//
+
+           
             updateToolBarItems()
         }
         
@@ -308,9 +306,6 @@ open class SSKWebViewController: UIViewController {
     private func hideToolBar() {
         toolBar.removeFromSuperview()
         
-//        webView.snp.updateConstraints { (make) in
-//            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
-//        }
     }
     
     private func updateToolBarItems() {
@@ -337,7 +332,6 @@ open class SSKWebViewController: UIViewController {
     }
     
     private func reload() {
-        //loadWebUrlRequest()
         webView.reload()
     }
     
@@ -501,9 +495,6 @@ extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
             alert.topBar.title = url?.host ?? "未知网页"
             alert.message = message
         }
-        
-        
-        
 
         
         

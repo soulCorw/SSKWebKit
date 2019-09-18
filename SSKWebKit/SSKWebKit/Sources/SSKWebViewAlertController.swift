@@ -50,6 +50,12 @@ class SSKWebViewAlertBottomBar: UIView {
         button.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
+        
+        self.addSubview(lineView)
+        lineView.snp.makeConstraints { (make) in
+            make.left.top.right.equalToSuperview()
+            make.height.equalTo(1)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -61,6 +67,12 @@ class SSKWebViewAlertBottomBar: UIView {
         btn.setTitle("确定", for: .normal)
         btn.setTitleColor(UIColor.red, for: .normal)
         return btn
+    }()
+    
+    lazy var lineView: UIView = {
+        let line = UIView()
+        line.backgroundColor = UIColor.groupTableViewBackground
+        return line
     }()
 }
 
@@ -124,7 +136,7 @@ class SSKWebViewAlertController: UIViewController {
     
     lazy var textView: SSKWebViewAlertTextView = {
         let tv = SSKWebViewAlertTextView()
-        tv.backgroundColor = UIColor.purple
+        //tv.backgroundColor = UIColor.purple
         return tv
     }()
     
@@ -158,7 +170,7 @@ class SSKWebViewAlertController: UIViewController {
             make.size.equalTo(CGSize(width: screen_width * 0.8, height: 200))
         }
         
-        topBar.backgroundColor = .red
+        //topBar.backgroundColor = .red
         container.addSubview(topBar)
         topBar.snp.makeConstraints { (make) in
             make.left.top.right.equalToSuperview()
