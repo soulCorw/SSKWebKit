@@ -74,7 +74,7 @@ class SSKWebNavigationToolBar: UIToolbar {
     lazy var backItem: UIButton = {
         let item = UIButton(type: .custom)
         item.tag = Tag.back
-        let images = SSKWebKitTool.makeToolBarBackImage()
+        let images = Bundle.makeToolBarBackImage()
         item.setImage(images.0.withRenderingMode(.alwaysOriginal), for: .normal)
         item.setImage(images.1.withRenderingMode(.alwaysOriginal), for: .selected)
         item.addTarget(self, action: #selector(itemsAction), for: .touchUpInside)
@@ -84,7 +84,7 @@ class SSKWebNavigationToolBar: UIToolbar {
     lazy var nextItem: UIButton = {
         let item = UIButton(type: .custom)
         item.tag = Tag.next
-        let images = SSKWebKitTool.makeToolBarNextImage()
+        let images = Bundle.makeToolBarNextImage()
         item.setImage(images.0.withRenderingMode(.alwaysOriginal), for: .selected)
         item.setImage(images.1.withRenderingMode(.alwaysOriginal), for: .normal)
         item.addTarget(self, action: #selector(itemsAction), for: .touchUpInside)
