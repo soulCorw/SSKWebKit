@@ -278,26 +278,31 @@ open class SSKWebViewController: UIViewController {
     }
     
     private func showToolBar() {
-        if toolBar.superview == nil {
-            self.view.addSubview(toolBar)
-            toolBar.snp.makeConstraints { (make) in
-                make.left.right.equalToSuperview()
-                make.height.equalTo(44)
+        
+        if webView.canGoBack || webView.canGoForward {
             
-                if #available(iOS 11.0, *) {
-                    make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
-                } else {
-                    make.bottom.equalTo(bottomLayoutGuide.snp.bottom)
+            if toolBar.superview == nil {
+                self.view.addSubview(toolBar)
+                toolBar.snp.makeConstraints { (make) in
+                    make.left.right.equalToSuperview()
+                    make.height.equalTo(44)
+                    
+                    if #available(iOS 11.0, *) {
+                        make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+                    } else {
+                        make.bottom.equalTo(bottomLayoutGuide.snp.bottom)
+                    }
                 }
             }
+            
+            
+//            webView.snp.updateConstraints { (make) in
+//                make.bottom.equalTo(toolBar.snp.top)
+//            }
+//
+            updateToolBarItems()
         }
         
-        
-//        webView.snp.updateConstraints { (make) in
-//            make.bottom.equalTo(toolBar.snp.top)
-//        }
-        
-        updateToolBarItems()
     }
     
     private func hideToolBar() {
@@ -389,7 +394,7 @@ open class SSKWebViewController: UIViewController {
         
         print(#function)
         
-        //jsBridgeHandler.lcDelegate?.onUnload()
+        jsBridgeHandler.lcDelegate?.onUnload()
         
         webView.removeObserver(self, forKeyPath: "URL")
         webView.removeObserver(self, forKeyPath: "estimatedProgress")
@@ -423,7 +428,7 @@ extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
     // 页面开始加载
     public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         progressView.alpha = 1.0
-        
+        showToolBar()
         debugPrint(#function)
     }
     
@@ -444,9 +449,7 @@ extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
         
         
 //        //
-        if webView.canGoBack || webView.canGoForward {
-            showToolBar()
-        }
+        showToolBar()
         
     }
     
