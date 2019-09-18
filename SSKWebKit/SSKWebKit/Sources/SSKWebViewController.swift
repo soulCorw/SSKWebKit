@@ -262,7 +262,7 @@ open class SSKWebViewController: UIViewController {
         loadWebUrlRequest()
         
         // 本控制器不再是webView的代理
-        jsBridgeHandler.config(webView, form: self)
+       // jsBridgeHandler.config(webView, form: self)
         
         
         

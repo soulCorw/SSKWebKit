@@ -67,7 +67,7 @@ class SettingsViewController: UITableViewController {
         let webVC = SSKWebViewController()
         webVC.urlString = "http://127.0.0.1:8080/webkit/ExampleApp.html"
         webVC.urlString = "https://sfestival.lizhi.fm/static/rankList/anchorFansContributionList.html?njId=2570067831857038380&tabIndex=1"
-//        webVC.urlString = "https://www.baidu.com"
+        webVC.urlString = "https://www.baidu.com"
         self.navigationController?.pushViewController(webVC, animated: true)
     }
     
