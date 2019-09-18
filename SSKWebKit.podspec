@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
 
     s.source_files = 'SSKWebKit/SSKWebKit/Sources/*.swift'
-    #s.resource     = 'Sources/HBQRCode.bundle'
+    s.resource     = 'SSKWebKit/SSKWebKit/Sources/SSKWebKit.bundle'
     
 
 
