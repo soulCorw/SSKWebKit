@@ -13,6 +13,10 @@ import SnapKit
 
 public struct NavBarConfig {
     
+    public init() {
+        
+    }
+    
     var barTintColor: UIColor?
     var tintColor: UIColor?
     
