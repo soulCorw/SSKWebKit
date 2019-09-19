@@ -17,10 +17,10 @@ public struct NavBarConfig {
         
     }
     
-    var barTintColor: UIColor?
-    var tintColor: UIColor?
+    public var barTintColor: UIColor?
+    public var tintColor: UIColor?
     
-    var titleTextAttributes: [NSAttributedString.Key : Any]?
+    public var titleTextAttributes: [NSAttributedString.Key : Any]?
     
 }
 
