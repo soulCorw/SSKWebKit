@@ -154,7 +154,11 @@ open class SSKWebViewController: UIViewController {
     var initURLDidFinish: Bool = false
     
     private lazy var webView: WKWebView = {
+        //let wkWebConfig = WKWebViewConfiguration()
+        //wkWebConfig.preferences.minimumFontSize = 18
+        
         let webView = WKWebView(frame: CGRect.zero)
+
         webView.addObserver(self, forKeyPath: "URL", options: .new, context: nil)
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         return webView
@@ -283,7 +287,11 @@ open class SSKWebViewController: UIViewController {
     
     private func showToolBar() {
         
+        
+        
         if webView.canGoBack || webView.canGoForward {
+            
+            print(webView.configuration)
             
             if toolBar.superview == nil {
                 let toolBarHeight = 44

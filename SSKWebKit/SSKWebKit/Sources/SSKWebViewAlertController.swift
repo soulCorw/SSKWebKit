@@ -65,7 +65,7 @@ class SSKWebViewAlertBottomBar: UIView {
     lazy var button: UIButton = {
         let btn = UIButton(type: .system)
         btn.setTitle("确定", for: .normal)
-        btn.setTitleColor(UIColor.red, for: .normal)
+        //btn.setTitleColor(UIColor.blue, for: .normal)
         return btn
     }()
     
@@ -85,7 +85,7 @@ class SSKWebViewAlertTextView: UIView {
         
         self.addSubview(textView)
         textView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
+            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10))
         }
     }
     
@@ -106,6 +106,8 @@ class SSKWebViewAlertTextView: UIView {
        // tv.isEditable = false
         tv.textAlignment = .center
         tv.backgroundColor = UIColor.white
+        tv.textColor = UIColor.darkGray
+        tv.numberOfLines = 0
         return tv
     }()
 }
@@ -167,7 +169,7 @@ class SSKWebViewAlertController: UIViewController {
         let screen_width = UIScreen.main.bounds.width
         container.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
-            make.size.equalTo(CGSize(width: screen_width * 0.8, height: 200))
+            make.size.equalTo(CGSize(width: screen_width * 0.7, height: 180))
         }
         
         //topBar.backgroundColor = .red
