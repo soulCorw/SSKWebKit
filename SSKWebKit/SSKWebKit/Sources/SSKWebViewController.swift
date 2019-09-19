@@ -500,6 +500,7 @@ extension SSKWebViewController: WKUIDelegate, WKNavigationDelegate {
     // 服务器重定向
     public func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
         debugPrint(#function)
+        print("重定向")
     }
     
 
