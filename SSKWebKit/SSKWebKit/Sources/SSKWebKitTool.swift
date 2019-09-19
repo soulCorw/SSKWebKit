@@ -87,4 +87,8 @@ extension Bundle {
         return (backIcon()!,
                 SSKWebKitTool.transform(for: nextIcon()!, orientation: .down).1)
     }
+    
+    static func closeIcon() -> UIImage? {
+        return  UIImage(named: "close", in: Bundle.sskWebkitBundle(), compatibleWith: nil)
+    }
 }

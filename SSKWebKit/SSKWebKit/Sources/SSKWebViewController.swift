@@ -244,7 +244,8 @@ open class SSKWebViewController: UIViewController {
         // 本控制器不再是webView的代理
         jsBridgeHandler.config(webView, form: self)
         
-
+       // makeCloseItem()
+        
     }
     
 
@@ -345,6 +346,20 @@ open class SSKWebViewController: UIViewController {
         }
     }
     
+    private func makeCloseItem() {
+        
+        let closeItem = UIBarButtonItem(image: Bundle.closeIcon()?.withRenderingMode(.alwaysOriginal),
+                                        style: .plain,
+                                        target: self,
+                                        action: #selector(closeItemAction))
+        
+        self.navigationItem.leftBarButtonItems = [closeItem]
+      
+    }
+    
+    @objc private func closeItemAction(_ sender: UIBarButtonItem) {
+        print(#function)
+    }
     
     
     private func loadWebUrlRequest() {
