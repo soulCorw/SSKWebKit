@@ -227,33 +227,9 @@ open class SSKWebViewController: UIViewController {
     }
     
     override open func viewWillLayoutSubviews() {
+        print(#function)
         super.viewWillLayoutSubviews()
-        var topMargin: CGFloat = 0
-        if #available(iOS 11.0, *) {
-            topMargin = self.view.safeAreaInsets.top
-        } else {
-            topMargin = 64
-        }
-        
-        webView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(topMargin)
-            $0.left.right.equalToSuperview()
-            
 
-            if #available(iOS 11.0, *) {
-                $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
-            } else {
-                $0.bottom.equalTo(bottomLayoutGuide.snp.bottom)
-                
-            }
-
-            
-        }
-        progressView.snp.makeConstraints {
-            $0.top.equalTo(webView)
-            $0.left.right.equalToSuperview()
-            $0.height.equalTo(3)
-        }
     }
     
     override open func viewDidLoad() {
@@ -276,6 +252,32 @@ open class SSKWebViewController: UIViewController {
         self.view.addSubview(webView)
         self.view.addSubview(progressView)
         
+        makeWebConstraints()
+        
+        progressView.snp.makeConstraints {
+            $0.top.equalTo(webView)
+            $0.left.right.equalToSuperview()
+            $0.height.equalTo(3)
+        }
+        
+    }
+    
+    private func makeWebConstraints() {
+        
+        webView.snp.makeConstraints {
+            
+            if #available(iOS 11.0, *) {
+                $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+                $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+            } else {
+                $0.top.equalTo(bottomLayoutGuide.snp.top)
+                $0.bottom.equalTo(bottomLayoutGuide.snp.bottom)
+                
+            }
+            
+             $0.left.right.equalToSuperview()
+            
+        }
     }
     
     private func showToolBar() {
@@ -283,10 +285,11 @@ open class SSKWebViewController: UIViewController {
         if webView.canGoBack || webView.canGoForward {
             
             if toolBar.superview == nil {
+                let toolBarHeight = 44
                 self.view.addSubview(toolBar)
                 toolBar.snp.makeConstraints { (make) in
                     make.left.right.equalToSuperview()
-                    make.height.equalTo(44)
+                    make.height.equalTo(toolBarHeight)
                     
                     if #available(iOS 11.0, *) {
                         make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
@@ -294,10 +297,22 @@ open class SSKWebViewController: UIViewController {
                         make.bottom.equalTo(bottomLayoutGuide.snp.bottom)
                     }
                 }
+                
+                // update 是更新已经存在约束的值，而不是新增一个约束
+                
+                webView.snp.updateConstraints { (make) in
+                    if #available(iOS 11.0, *) {
+                        make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-toolBarHeight)
+                    } else {
+                        make.bottom.equalTo(bottomLayoutGuide.snp.bottom).offset(-toolBarHeight)
+                        
+                    }
+                }
+                
+                
             }
             
-
-           
+            
             updateToolBarItems()
         }
         
@@ -305,6 +320,14 @@ open class SSKWebViewController: UIViewController {
     
     private func hideToolBar() {
         toolBar.removeFromSuperview()
+        
+        webView.snp.updateConstraints { (make) in
+            if #available(iOS 11.0, *) {
+                make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+            } else {
+                make.bottom.equalTo(bottomLayoutGuide.snp.bottom)
+            }
+        }
         
     }
     

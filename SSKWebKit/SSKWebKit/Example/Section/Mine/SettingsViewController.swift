@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SettingsViewController: UITableViewController {
 
@@ -20,6 +21,8 @@ class SettingsViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.tableView.tableFooterView = UIView()
+        
+        
 
     }
 
@@ -64,12 +67,29 @@ class SettingsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        if indexPath.row == 0 {
+            makeSF()
+            return
+        }
+
+        
         let webVC = SSKWebViewController()
         webVC.urlString = "http://127.0.0.1:8080/webkit/ExampleApp.html"
-        //webVC.urlString = "https://sfestival.lizhi.fm/static/rankList/anchorFansContributionList.html?njId=2570067831857038380&tabIndex=1"
+        webVC.urlString = "https://sfestival.lizhi.fm/static/rankList/anchorFansContributionList.html?njId=2570067831857038380&tabIndex=1"
        // webVC.urlString = "https://www.baidu.com"
-        //webVC.urlString = "https://wx.gfbxjj.cn/insurance_h5/#/product-agreement"
+        webVC.urlString = "https://wx.gfbxjj.cn/insurance_h5/#/product-agreement"
         self.navigationController?.pushViewController(webVC, animated: true)
+    }
+    
+    
+    func makeSF() {
+        
+        var urlString = "https://sfestival.lizhi.fm/static/rankList/anchorFansContributionList.html?njId=2570067831857038380&tabIndex=1"
+        urlString = "https://wx.gfbxjj.cn/insurance_h5/#/product-agreement"
+        let url = URL(string: urlString)
+        let sfVC = SFSafariViewController(url: url!)
+        self.present(sfVC, animated: true, completion: nil)
+        //self.navigationController?.pushViewController(sfVC, animated: true)
     }
     
     deinit {
