@@ -11,7 +11,7 @@ import WebKit
 import SnapKit
 
 
-struct NavBarConfig {
+public struct NavBarConfig {
     
     var barTintColor: UIColor?
     var tintColor: UIColor?
@@ -141,14 +141,14 @@ open class SSKWebViewController: UIViewController {
     
     
     open var urlString: String = ""
-    var customTitle: String = "" {
+    open var customTitle: String = "" {
         didSet {
             self.navigationItem.title = customTitle
         }
     }
     
-    var isCustomNavBar: Bool = false
-    var navBarConfig: NavBarConfig?
+    open var isCustomNavBar: Bool = false
+    open var navBarConfig: NavBarConfig?
     
     // 初始化的URL是否已经加载完成
     var initURLDidFinish: Bool = false
@@ -181,7 +181,7 @@ open class SSKWebViewController: UIViewController {
         return bar
     }()
     
-    var jsAlertHandler: ((String, WKFrameInfo) ->Void)?
+    open var jsAlertHandler: ((String, WKFrameInfo) ->Void)?
     
     lazy var jsBridgeHandler: SSKWebViewJSBridgeHandler = {
         let bridge = SSKWebViewJSBridgeHandler()
