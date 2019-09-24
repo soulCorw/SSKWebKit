@@ -186,6 +186,11 @@ open class SSKWebViewController: UIViewController {
     }()
     
     open var jsAlertHandler: ((String, WKFrameInfo) ->Void)?
+    open var h5CallOCRHandler: ((Int) ->Void)? {
+        didSet {
+            jsBridgeHandler.ocrDelegate?.h5CallOCRHandler = h5CallOCRHandler
+        }
+    }
     
     lazy var jsBridgeHandler: SSKWebViewJSBridgeHandler = {
         let bridge = SSKWebViewJSBridgeHandler()
@@ -615,6 +620,7 @@ extension SSKWebViewController {
        // print("file:" + #file, "\n", #line, #function)
         switch action {
         case .back:
+          print(webView.url?.absoluteString)
             if self.webView.canGoBack {
                 self.webView.goBack()
             }
@@ -630,5 +636,12 @@ extension SSKWebViewController {
             print(#function)
         }
       
+    }
+}
+
+extension SSKWebViewController {
+    
+    public func ocrResult(_ result: [String: Any]) {
+        self.jsBridgeHandler.ocrDelegate?.ocrResult(result)
     }
 }

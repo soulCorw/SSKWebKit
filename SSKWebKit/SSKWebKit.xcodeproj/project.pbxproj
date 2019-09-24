@@ -27,6 +27,7 @@
 		0448BE1A2327AAFF001041A7 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0448BE192327AAFF001041A7 /* Mine.storyboard */; };
 		0448BE1C2327AEE4001041A7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE1B2327AEE4001041A7 /* SettingsViewController.swift */; };
 		0448BE1F2327B2D3001041A7 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE1E2327B2D3001041A7 /* BaseNavigationController.swift */; };
+		046A5A782339F297001E975E /* SSKWebOCRDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A5A772339F297001E975E /* SSKWebOCRDelegate.swift */; };
 		04AD76272331967B00FE6FEF /* SSKWebKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04AD76262331967B00FE6FEF /* SSKWebKit.bundle */; };
 		04DB437F2329E8260010E034 /* SSKWebLifeCycleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB437E2329E8260010E034 /* SSKWebLifeCycleDelegate.swift */; };
 		04DB4381232A2B980010E034 /* SSKWebCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB4380232A2B980010E034 /* SSKWebCacheManager.swift */; };
@@ -75,6 +76,7 @@
 		0448BE192327AAFF001041A7 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		0448BE1B2327AEE4001041A7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0448BE1E2327B2D3001041A7 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		046A5A772339F297001E975E /* SSKWebOCRDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebOCRDelegate.swift; sourceTree = "<group>"; };
 		04AD76262331967B00FE6FEF /* SSKWebKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSKWebKit.bundle; sourceTree = "<group>"; };
 		04DB437E2329E8260010E034 /* SSKWebLifeCycleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebLifeCycleDelegate.swift; sourceTree = "<group>"; };
 		04DB4380232A2B980010E034 /* SSKWebCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebCacheManager.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				04DB4380232A2B980010E034 /* SSKWebCacheManager.swift */,
 				04DB437E2329E8260010E034 /* SSKWebLifeCycleDelegate.swift */,
 				044474BB23289D9D00C47D47 /* SSKWebViewJSBridgeHandler.swift */,
+				046A5A772339F297001E975E /* SSKWebOCRDelegate.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				0448BE0F2327A5E9001041A7 /* AppDelegate.swift in Sources */,
 				0448BE102327A5E9001041A7 /* AppDelegate+Extension.swift in Sources */,
 				0448BE1F2327B2D3001041A7 /* BaseNavigationController.swift in Sources */,
+				046A5A782339F297001E975E /* SSKWebOCRDelegate.swift in Sources */,
 				0448BE142327A618001041A7 /* DiscoverViewController.swift in Sources */,
 				0448BE122327A5FC001041A7 /* HomeViewController.swift in Sources */,
 				0448BDFF232795AD001041A7 /* SSKWebViewAlertController.swift in Sources */,

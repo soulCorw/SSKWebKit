@@ -19,8 +19,10 @@ class SSKWebViewJSBridgeHandler {
             
             if jsBridge != nil {
                 lcDelegate = SSKWebLifeCycleDelegate(jsBridge!)
+                ocrDelegate = SSKWebOCRDelegate(jsBridge!)
             } else {
                 lcDelegate = nil
+                ocrDelegate = nil
             }
             
         }
@@ -33,6 +35,8 @@ class SSKWebViewJSBridgeHandler {
     // 与jsBridge对象同步绑定
     
     private(set) var lcDelegate: SSKWebLifeCycleDelegate?
+    
+    private(set) var ocrDelegate: SSKWebOCRDelegate?
     
     
     init() {
