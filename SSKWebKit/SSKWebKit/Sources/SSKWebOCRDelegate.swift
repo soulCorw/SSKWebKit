@@ -25,7 +25,7 @@ class SSKWebOCRDelegate {
     private var jsBridge: WKWebViewJavascriptBridge!
     
     // 把事件抛给外部
-    var h5CallOCRHandler: ((Int) ->Void)?
+    var jsCallOCRHandler: ((Int) ->Void)?
     
     init(_ bridge: WKWebViewJavascriptBridge) {
         jsBridge = bridge
@@ -48,7 +48,7 @@ class SSKWebOCRDelegate {
                 let json = JSON(info)
                 let type =  json.intValue
                 
-                if let handler = self.h5CallOCRHandler {
+                if let handler = self.jsCallOCRHandler {
                     handler(type)
                     
                     result = true

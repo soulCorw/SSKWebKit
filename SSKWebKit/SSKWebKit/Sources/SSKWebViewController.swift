@@ -186,9 +186,9 @@ open class SSKWebViewController: UIViewController {
     }()
     
     open var jsAlertHandler: ((String, WKFrameInfo) ->Void)?
-    open var h5CallOCRHandler: ((Int) ->Void)? {
+    open var jsCallOCRHandler: ((Int) ->Void)? {
         didSet {
-            jsBridgeHandler.ocrDelegate?.h5CallOCRHandler = h5CallOCRHandler
+            jsBridgeHandler.ocrDelegate?.jsCallOCRHandler = jsCallOCRHandler
         }
     }
     
