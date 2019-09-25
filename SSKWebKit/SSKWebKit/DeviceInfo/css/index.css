@@ -1,0 +1,48 @@
+
+
+header {
+    text-align: right;
+    /* background-color: red; */
+    height: 64px;
+}
+
+p {
+    color: darkgray;
+}
+
+#reloadItem {
+    height: 80px;
+    width: 80px;
+
+    background-color: rgb(185, 15, 228);
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+    
+}
+
+.appInfo-card {
+    text-align: center;
+}
+
+.ocr-card {
+    text-align: center;
+}
+
+
+.infoItem {
+    background-color: rgb(33, 129, 247);
+    height: 44px;
+    width: 50%;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+

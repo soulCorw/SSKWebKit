@@ -78,6 +78,12 @@ class SettingsViewController: UITableViewController {
         let baseURL = "http://127.0.0.1:8080"
         webVC.urlString = baseURL + "/DeviceInfo/html/index.html"//"/webkit/ExampleApp.html"
         
+        webVC.urlString = loadFile()
+        webVC.jsCallOCRHandler = {
+            print($0)
+            
+            
+        }
         
         //webVC.urlString = "https://sfestival.lizhi.fm/static/rankList/anchorFansContributionList.html?njId=2570067831857038380&tabIndex=1"
        // webVC.urlString = "https://www.baidu.com"
@@ -94,6 +100,14 @@ class SettingsViewController: UITableViewController {
         let sfVC = SFSafariViewController(url: url!)
         self.present(sfVC, animated: true, completion: nil)
         //self.navigationController?.pushViewController(sfVC, animated: true)
+    }
+    
+    func loadFile() -> String {
+        
+        let path = Bundle.main.path(forResource: "index", ofType: "html")
+        let exampleURL = URL(fileURLWithPath: path!)
+        return exampleURL.absoluteString
+
     }
     
     deinit {

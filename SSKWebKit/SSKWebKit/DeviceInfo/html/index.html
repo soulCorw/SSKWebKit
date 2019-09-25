@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1; user-scalable=no;">
+    <title>get infomation</title>
+
+
+    <link rel="stylesheet" href="../css/index.css">
+
+    <script type="text/javascript">
+
+    function setupWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+        if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+        window.WVJBCallbacks = [callback];
+        var WVJBIframe = document.createElement('iframe');
+        WVJBIframe.style.display = 'none';
+        WVJBIframe.src = 'https://__bridge_loaded__';
+        document.documentElement.appendChild(WVJBIframe);
+        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+    }
+
+    setupWebViewJavascriptBridge(function(bridge) {
+
+
+        bridge.registerHandler('ocrResult', function(data, responseCallback) {
+
+            var infoLabel = document.getElementById('ocrInfoLabl')
+            infoLabel.innerHTML = data['num']
+			
+		})
+
+
+
+        var reloadItem = document.getElementById("reloadItem")
+        reloadItem.onclick = function(e) {
+            bridge.callHandler('reload', function(response) {
+				
+			})
+        }
+        
+        var appInfoItem = document.getElementById("appInfoItem")
+  
+        appInfoItem.onclick = function(e) {
+            
+            var infoLabel = document.getElementById('infoLabl')
+            infoLabel.innerHTML = "get app info"
+        }
+
+        var ocrItem = document.getElementById("ocrItem")
+        ocrItem.onclick = function(e) {
+
+              bridge.callHandler('callOCR', 100, function(response) {
+				
+			})
+            
+            
+        }
+    })
+
+    function reloadAction() {
+        debugger
+        alert('click go')
+    }
+
+
+    </script>
+</head>
+<body>
+
+    <header>
+        <button id="reloadItem">reload</button>
+    </header>
+    
+
+    <div id="content-card">
+
+        <p>● 点击下方按钮获得应用和设备信息</p>
+        <div class="appInfo-card">
+                <button id="appInfoItem" class="infoItem">应用信息</button>
+                <p id="infoLabl">app info</p>
+        </div>
+        <hr>
+        <p>● 点击下方按钮调起OCR</p>
+        <div class="ocr-card">
+                <button id="ocrItem" class="infoItem">OCR信息</button>
+                <p id="ocrInfoLabl">OCR info</p>
+        </div>
+       
+
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+
+    <script type="text/javascript">
+        document.getElementById("footer").innerHTML = navigator.userAgent;
+        
+    </script>
+
+
+
+</body>
+</html>

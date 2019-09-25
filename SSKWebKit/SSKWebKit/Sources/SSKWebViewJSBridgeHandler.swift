@@ -19,7 +19,10 @@ class SSKWebViewJSBridgeHandler {
             
             if jsBridge != nil {
                 lcDelegate = SSKWebLifeCycleDelegate(jsBridge!)
+                
+                
                 ocrDelegate = SSKWebOCRDelegate(jsBridge!)
+                ocrDelegate?.jsCallOCRHandler = formVC?.jsCallOCRHandler
             } else {
                 lcDelegate = nil
                 ocrDelegate = nil
@@ -48,9 +51,11 @@ class SSKWebViewJSBridgeHandler {
     }
     
     func config(_ webView: WKWebView, form viewController: SSKWebViewController) {
-        jsBridge = WKWebViewJavascriptBridge(for: webView)
+        
         formVC = viewController
         wkWebView = webView
+        
+        jsBridge = WKWebViewJavascriptBridge(for: webView)
         
         
         jsBridge?.setWebViewDelegate(viewController)

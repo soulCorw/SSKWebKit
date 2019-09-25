@@ -29,6 +29,8 @@
 		0448BE1F2327B2D3001041A7 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448BE1E2327B2D3001041A7 /* BaseNavigationController.swift */; };
 		046A5A782339F297001E975E /* SSKWebOCRDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A5A772339F297001E975E /* SSKWebOCRDelegate.swift */; };
 		04AD76272331967B00FE6FEF /* SSKWebKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04AD76262331967B00FE6FEF /* SSKWebKit.bundle */; };
+		04D1FC7C233B0CA800D61F05 /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = 04D1FC79233B0CA700D61F05 /* index.css */; };
+		04D1FC7D233B0CA800D61F05 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 04D1FC7B233B0CA700D61F05 /* index.html */; };
 		04DB437F2329E8260010E034 /* SSKWebLifeCycleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB437E2329E8260010E034 /* SSKWebLifeCycleDelegate.swift */; };
 		04DB4381232A2B980010E034 /* SSKWebCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB4380232A2B980010E034 /* SSKWebCacheManager.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +80,8 @@
 		0448BE1E2327B2D3001041A7 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		046A5A772339F297001E975E /* SSKWebOCRDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebOCRDelegate.swift; sourceTree = "<group>"; };
 		04AD76262331967B00FE6FEF /* SSKWebKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSKWebKit.bundle; sourceTree = "<group>"; };
+		04D1FC79233B0CA700D61F05 /* index.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
+		04D1FC7B233B0CA700D61F05 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		04DB437E2329E8260010E034 /* SSKWebLifeCycleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebLifeCycleDelegate.swift; sourceTree = "<group>"; };
 		04DB4380232A2B980010E034 /* SSKWebCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKWebCacheManager.swift; sourceTree = "<group>"; };
 		4032AEB5627D38A275EE0945 /* Pods-SSKWebKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSKWebKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SSKWebKit/Pods-SSKWebKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		0448BDC9232780E9001041A7 /* SSKWebKit */ = {
 			isa = PBXGroup;
 			children = (
+				04D1FC77233B0CA700D61F05 /* DeviceInfo */,
 				0448BE0223279CD0001041A7 /* Example */,
 				0448BDFB23279459001041A7 /* Common */,
 				0448BDF8232793B5001041A7 /* Sources */,
@@ -258,6 +263,31 @@
 				0448BE1E2327B2D3001041A7 /* BaseNavigationController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		04D1FC77233B0CA700D61F05 /* DeviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				04D1FC78233B0CA700D61F05 /* css */,
+				04D1FC7A233B0CA700D61F05 /* html */,
+			);
+			path = DeviceInfo;
+			sourceTree = "<group>";
+		};
+		04D1FC78233B0CA700D61F05 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				04D1FC79233B0CA700D61F05 /* index.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		04D1FC7A233B0CA700D61F05 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				04D1FC7B233B0CA700D61F05 /* index.html */,
+			);
+			path = html;
 			sourceTree = "<group>";
 		};
 		57F21274DFD1BE313CA6BF6E /* Pods */ = {
@@ -384,7 +414,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0448BE1A2327AAFF001041A7 /* Mine.storyboard in Resources */,
+				04D1FC7C233B0CA800D61F05 /* index.css in Resources */,
 				0448BDD5232780EC001041A7 /* LaunchScreen.storyboard in Resources */,
+				04D1FC7D233B0CA800D61F05 /* index.html in Resources */,
 				0448BDD2232780EC001041A7 /* Assets.xcassets in Resources */,
 				04AD76272331967B00FE6FEF /* SSKWebKit.bundle in Resources */,
 			);

@@ -132,6 +132,10 @@ class SSKWebNavigationToolBar: UIToolbar {
 
 open class SSKWebViewController: UIViewController {
     
+    public enum LoadType {
+        case net, localFile
+    }
+    
     var navBarOriginBarTintColor: UIColor?
     var navBarOriginTintColor: UIColor?
     var navBarOriginTitleTextAttributes: [NSAttributedString.Key : Any]?
@@ -143,8 +147,15 @@ open class SSKWebViewController: UIViewController {
         return statusBarStyle
     }
     
+    open var loadType: LoadType = .net
     
+    // 网络加载
     open var urlString: String = ""
+    open var url: URL?
+    
+    // load file for local
+    open var fileURL: URL?
+    
     open var customTitle: String = "" {
         didSet {
             self.navigationItem.title = customTitle
@@ -380,10 +391,30 @@ open class SSKWebViewController: UIViewController {
     
     
     private func loadWebUrlRequest() {
-        if let url = URL(string: urlString) {
-            let request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
-            webView.load(request)
+        
+        switch loadType {
+        case .net:
+            
+            
+            var url = self.url
+            if url == nil {
+                url = URL(string: self.urlString)
+            }
+            
+            if let requestURL = url {
+                let request = URLRequest(url: requestURL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
+                webView.load(request)
+            }
+           
+            break
+        case .localFile:
+            
+            if let url = self.fileURL {
+                webView.loadFileURL(url, allowingReadAccessTo: Bundle.main.bundleURL)
+            }
+            break
         }
+        
     }
     
     private func reload() {
