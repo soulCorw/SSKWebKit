@@ -41,7 +41,7 @@ open class SSKWebViewJSBridgeHandler {
     
     private(set) var ocrDelegate: SSKWebOCRDelegate?
     
-    var customRouteHandler: (() -> Void)?
+    open var customRouteHandler: (() -> Void)?
     
     
     init() {
@@ -82,8 +82,8 @@ open class SSKWebViewJSBridgeHandler {
         
         baseData()
         
-        if let handler = self.customRouteHandler {
-            handler()
+        if let customHandler = self.customRouteHandler {
+            customHandler()
         }
 
         
