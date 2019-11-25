@@ -11,10 +11,10 @@ import WebViewJavascriptBridge
 import SwiftyJSON
 
 // 不能使用 static ，因为必须为每一个webViewVC单独配置一个实例
-class SSKWebViewJSBridgeHandler {
+public class SSKWebViewJSBridgeHandler {
 
     
-    var jsBridge: WKWebViewJavascriptBridge? = nil {
+    private(set) var jsBridge: WKWebViewJavascriptBridge? = nil {
         didSet {
             
             if jsBridge != nil {

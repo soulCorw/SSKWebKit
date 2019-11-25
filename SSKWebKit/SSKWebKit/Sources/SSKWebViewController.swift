@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 import SnapKit
-
+import Combine
 
 public struct NavBarConfig {
     
