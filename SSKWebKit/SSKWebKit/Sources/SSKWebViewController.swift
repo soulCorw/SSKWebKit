@@ -202,7 +202,7 @@ open class SSKWebViewController: UIViewController {
         }
     }
     
-    lazy var jsBridgeHandler: SSKWebViewJSBridgeHandler = {
+    open lazy var jsBridgeHandler: SSKWebViewJSBridgeHandler = {
         let bridge = SSKWebViewJSBridgeHandler()
         return bridge
     }()

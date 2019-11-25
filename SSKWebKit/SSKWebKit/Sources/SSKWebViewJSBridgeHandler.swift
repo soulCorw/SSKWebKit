@@ -14,7 +14,7 @@ import SwiftyJSON
 open class SSKWebViewJSBridgeHandler {
 
     
-    private(set) var jsBridge: WKWebViewJavascriptBridge? = nil {
+    open var jsBridge: WKWebViewJavascriptBridge? = nil {
         didSet {
             
             if jsBridge != nil {
